@@ -95,7 +95,7 @@ func run() int {
 			return statusError
 		}
 
-		_, err = os.Stdout.Write([]byte(completion))
+		_, err = os.Stdout.Write([]byte("----------------------------------------\n" + completion + "\n----------------------------------------\n"))
 		if err != nil {
 			fmt.Println("Error writing to stdout:", err)
 			return statusError
